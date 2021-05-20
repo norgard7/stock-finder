@@ -1,0 +1,40 @@
+/* CSS color variables */
+
+:root {
+    --dark: #000000;
+    --light: #000000;
+    --option_here: #000000;
+}
+
+body {
+    margin: 0%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: limegreen;
+}
+
+#Recent_Searches {
+    height: 400px;
+    width: 250px;
+    border: solid;
+    border-color: limegreen;
+}
+
+#Stock_Value {
+    height: 400px;
+    width: 900px;
+    border: solid;
+    border-color: limegreen;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
