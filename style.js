@@ -3,14 +3,32 @@ let newsEl = document.querySelector("#news");
 let apiKey = "8cd8f664033325a7f14a5b678865218c";
 
 function getNews(company) {
-    let apiUrl = 'https://gnews.io/api/v4/search?q='+ company + '&country=us&token=sortby=relevance&token=' + apiKey;
+    let apiUrl = 'https://gnews.io/api/v4/search?q='+ company + '&country=us&sortby=relevance&token=' + apiKey;
     fetch(apiUrl)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
         console.log(data);
+        displayNews(data);
     });
+}
+function displayNews(data) {
+    newsEl.innerHTML = "";
+    for(let i =0; i < 3; i++){
+        let articleDiv = document.createElement("div");
+        let description = document.createElement("p");
+        let headline = document.createElement("a");
+        headline.textContent = data.articles[i].title;
+        headline.href = data.articles[i].url;
+        headline.target="_blank";
+        // populate the description
+        description.textContent = data.articles[i].description;
+        // div container
+        articleDiv.appendChild(headline);
+        articleDiv.appendChild(description);
+        newsEl.appendChild(articleDiv);
+    }
 }
 
 
