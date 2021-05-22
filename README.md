@@ -1,3 +1,1 @@
-# web-dev-project1
-
-Hey, this boot camp is fun
+# This is the project page
