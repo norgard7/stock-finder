@@ -33,30 +33,7 @@
         </section>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="FORDEV.js"></script>
 </body>
-
-
 
 </html>
