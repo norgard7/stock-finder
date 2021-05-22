@@ -53,7 +53,7 @@ $("#tags").autocomplete({
 // }
 
 // getApi(requestUrl);
-=======
+
 
     fetch(requestTickers)
         .then(function (response) {
@@ -79,36 +79,33 @@ $("#tags").autocomplete({
 
 getApi(requestTickers);
 
-
-{/* <script>
-  $( function() {
+/*
+$( function() {
     var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
     ];
     $( "#tags" ).autocomplete({
-      source: availableTags
+    source: availableTags
     });
-  } );
-  </script> */}
-
+  } ); */
