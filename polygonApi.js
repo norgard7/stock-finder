@@ -1,19 +1,19 @@
 
+// Lauren Code
 
+// let newsEl = document.querySelector("#news");
+// let apiKey = "8cd8f664033325a7f14a5b678865218c";
 
-let newsEl = document.querySelector("#news");
-let apiKey = "8cd8f664033325a7f14a5b678865218c";
-
-function getNews(company) {
-    let apiUrl = `https://gnews.io/api/v4/search?q=${company}&country=us&token=sortby=relevance&token=${apiKey}`;
-    fetch(apiUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
-}
+// function getNews(company) {
+//     let apiUrl = `https://gnews.io/api/v4/search?q=${company}&country=us&token=sortby=relevance&token=${apiKey}`;
+//     fetch(apiUrl)
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data) {
+//         console.log(data);
+//     });
+// }
 
 
 //---------------------------------------------
@@ -51,6 +51,8 @@ stocks = "?market=stocks"
 search = "?search=microsoft"
 
 function getTickers(requestTickers1) {
+
+    console.log("getTickers functionc called") ;
 
     let companies = []
 
@@ -100,14 +102,20 @@ function getTickers(requestTickers1) {
 
                         while (companyOptions.firstChild) {
                             companyOptions.removeChild(companyOptions.firstChild);
-                        }
+                        } ;
 
+                        console.log("calling addSearchToHistory")
                         addSearchToHistory(newOption.textContent, ticker) ;
 
-                        clear() ;
+                        while (recentSearches.firstChild) {
+                            recentSearches.removeChild(recentSearches.firstChild);
+                        } ;
+                        
+                        console.log("calling populateRecentSearches")
                         populateRecentSearches() ;
 
-                        // getStockData(ticker) ;
+                        console.log("calling getStockData")
+                        getStockData(ticker) ;
 
                     })
 
@@ -124,10 +132,16 @@ function getTickers(requestTickers1) {
 
 // let symbol = "AMRN"
 
-function getStockData() {
-    // let url = "https://api.polygon.io/v2/reference/tickers/AAPL?apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S" ;
-    let url = "https://api.polygon.io/v1/meta/symbols/AAPL/company?&apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S" ;
+let companyLogo = document.getElementById("companyLogo") ;
+let companyName = document.getElementById("companyName") ;
+let companyDescription = document.getElementById("companyDescription") ;
+let companyUrl = document.getElementById("companyUrl") ;
 
+function getStockData(ticker) {
+    console.log("getStockData function called") ;
+    // let url = "https://api.polygon.io/v2/reference/tickers/AAPL?apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S" ;
+    let url = `https://api.polygon.io/v1/meta/symbols/${ticker}/company?&apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S` ;
+    console.log(url) ;
         fetch(url)
             .then(function (response) {
                 console.log(response.status);
@@ -138,17 +152,33 @@ function getStockData() {
             }) .then(function (data) {
                 console.log(data);
 
+                let logo = data["logo"] ;
+
+                let name = data["name"] ;
+
+                let description = data["description"] ;
+
+                let url = data["url"] ;
+
+                companyLogo.setAttribute("src", logo) ;
+
+                companyName.textContent = name ;
+
+                companyDescription.textContent = description ;
+
+                companyUrl.textContent = url ;
+
+
+                companyUrl.setAttribute("href", `${url}`) ; 
+
+
         }) ;
 
     }
 
-
-
-
-getStockData() ;
-
 //Local Storage Stuff
 function initializeLocalStorage() {
+    console.log("initializeLocalStorage function called") ;
     if (localStorage.getItem("stockSearchHistory") === null) {
         let searchHistoryArray = [] ;
         localStorage.setItem("stockSearchHistory", JSON.stringify(searchHistoryArray)) ;
@@ -160,6 +190,7 @@ function initializeLocalStorage() {
 let recentSearchesDiv = document.getElementById("recentSearches") ; 
 
 function populateRecentSearches() {
+    console.log("populateRecentSearches function called") ;
     let searchHistoryArray = JSON.parse(localStorage.getItem("stockSearchHistory")) ;
 
         for (let i = searchHistoryArray.length -1; i>=0; i--) {
@@ -170,13 +201,19 @@ function populateRecentSearches() {
 
             ticker = searchHistoryArray[i]["ticker"] ;
 
-            console.log(lastSearch.textContent) ;
+            // console.log(lastSearch.textContent) ;
 
             lastSearch.setAttribute("type", "button") ;
 
             lastSearch.setAttribute("class", "recentSearchButton") ;
 
-            lastSearch.addEventListener("click", function() {
+            lastSearch.setAttribute("value", ticker) ;
+
+            lastSearch.addEventListener("click", function(event) {
+
+                ticker = event.target.getAttribute("value")
+
+                console.log(ticker) 
                 getStockData(ticker)
             }) ;
 
@@ -184,9 +221,9 @@ function populateRecentSearches() {
     }
 }
 
-initializeLocalStorage() ;
 
 function addSearchToHistory(text, ticker) {
+    console.log("addSearchToHistory function called") ;
 
     let storageObj = {
         "name": "",
@@ -210,6 +247,7 @@ clearRecentSearches.addEventListener("click", function(){
 
 ////
 function clear() {
+    console.log("clear function called") ;
 
     while (recentSearches.firstChild) {
     recentSearches.removeChild(recentSearches.firstChild);
@@ -219,8 +257,19 @@ function clear() {
     searchHistoryArray = []
 
     localStorage.setItem("stockSearchHistory", JSON.stringify(searchHistoryArray)) ;
+
+    companyLogo.setAttribute("src", "")
+
+    companyName.textContent = "" ;
+
+    companyDescription.textContent = "" ;
+    
+    companyUrl.textContent = ""
 }
-    ////
+
+
+
+initializeLocalStorage() ;
 // ---------------------------------------------
 // Rhyce's Code End
 // ---------------------------------------------
