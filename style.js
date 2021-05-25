@@ -17,16 +17,22 @@ function displayNews(data) {
     newsEl.innerHTML = "";
     for(let i =0; i < 3; i++){
         let articleDiv = document.createElement("div");
+        let textDiv= document.createElement("div");
         let description = document.createElement("p");
         let headline = document.createElement("a");
+        let image = document.createElement("img");
         headline.textContent = data.articles[i].title;
         headline.href = data.articles[i].url;
         headline.target="_blank";
-        // populate the description
-        description.textContent = data.articles[i].description;
+        // populate the description/content of article, it lets you know how many characters are still available to read.
+        description.textContent = data.articles[i].content;
+        image.src = data.articles[i].image;
+        image.width ="200";
         // div container
-        articleDiv.appendChild(headline);
-        articleDiv.appendChild(description);
+        textDiv.appendChild(headline);
+        textDiv.appendChild(description);
+        articleDiv.appendChild(image);
+        articleDiv.appendChild(textDiv);
         newsEl.appendChild(articleDiv);
     }
 }
