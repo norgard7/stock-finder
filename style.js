@@ -310,7 +310,7 @@ const labels = [
     
   };
 
-  var myChart = new Chart(
+  let myChart = new Chart(
     document.getElementById('myChart'),
     config
   );
