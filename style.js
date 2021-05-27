@@ -1,12 +1,82 @@
 let newsEl = document.querySelector("#news");
+let stockInfoEl = document.querySelector("#stockInfo");
 let apiKey = "8cd8f664033325a7f14a5b678865218c";
+
+// created a function to fetch api
+function getStock(company){
+    // Added the concatination of + company + default from yahoo finance
+    fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary?symbol=" + company + "&region=US", {
+	    "method": "GET",
+	    "headers": {
+		    "x-rapidapi-key": "bd4556767fmsh940acdc2512cbe8p14bf60jsncce8acab51ba",
+		    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com"
+	    }
+    })
+    .then(response => {
+        console.log(response);
+        // added the below line
+        return response.json();
+    })
+    .catch(err => {
+	    console.error(err);
+    })
+    // add the below .then to run function
+    .then(function (data) {
+        console.log(data);
+        stockInfo(data);
+    })
+}
+
+// created a function to grab the important stock info
+function stockInfo(data){
+    //current price
+    let price = document.createElement("p");
+    let currentPrice = data.financialData.currentPrice.fmt;
+    price.textContent = `Current Price: $${currentPrice}`;
+    //day price range
+    let dayRange = document.createElement("p");
+    let dayHigh = data.summaryDetail.dayHigh.fmt;
+    let dayLow = data.summaryDetail.dayLow.fmt;
+    dayRange.textContent = `Today's Price Range: $${dayLow} to $${dayHigh}`;
+    // year price range
+    let yearRange = document.createElement("p");
+    let yearHigh = data.summaryDetail.fiftyTwoWeekHigh.fmt;
+    let yearLow = data.summaryDetail.fiftyTwoWeekLow.fmt;
+    yearRange.textContent = `The Year's Price Range: $${yearLow} to $${yearHigh}`;
+    //how much company is worth
+    let mktCap = document.createElement("p");
+    let marketCap = data.price.marketCap.fmt;
+    mktCap.textContent = `Market Cap: $${marketCap}`;
+    //price earnings ratio: price/earnings
+    let peRatio = document.createElement("p");
+    let trailingPE = data.summaryDetail.trailingPE.fmt;
+    if(!trailingPE) {
+        trailingPE = 0;
+    }
+    peRatio.textContent = `PE Ratio: ${trailingPE}`;
+    //dividends per year/current price
+    let divYield = document.createElement("p");
+    let dividend = data.summaryDetail.dividendYield.fmt;
+    if(!dividend) {
+        dividend = "no dividend";
+    }
+    divYield.textContent = `Dividend Yield: ${dividend}`;
+    console.log(dividend);
+    // display stock info in html
+    stockInfoEl.appendChild(price);
+    stockInfoEl.appendChild(dayRange);
+    stockInfoEl.appendChild(yearRange);
+    stockInfoEl.appendChild(mktCap);
+    stockInfoEl.appendChild(peRatio);
+    stockInfoEl.appendChild(divYield);
+}
+
 
 function getNews(company) {
 
     let apiUrl = `https://gnews.io/api/v4/search?q=${company}&country=us&token=sortby=relevance&token=${apiKey}`;
 
-    // let apiUrl = 'https://gnews.io/api/v4/search?q='+ company + '&country=us&sortby=relevance&token=' + apiKey;
-
+    
     fetch(apiUrl)
     .then(function (response) {
         return response.json();
@@ -22,6 +92,7 @@ function displayNews(data) {
     newsEl.innerHTML = "";
     for(let i =0; i < 3; i++){
         let articleDiv = document.createElement("div");
+        articleDiv.classList.add("newsCard");
         let textDiv= document.createElement("div");
         let description = document.createElement("p");
         let headline = document.createElement("a");
@@ -32,7 +103,6 @@ function displayNews(data) {
         // populate the description/content of article, it lets you know how many characters are still available to read.
         description.textContent = data.articles[i].content;
         image.src = data.articles[i].image;
-        image.width ="200";
         // div container
         textDiv.appendChild(headline);
         textDiv.appendChild(description);
