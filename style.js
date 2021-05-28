@@ -312,7 +312,7 @@ function populateRecentSearches() {
 
                 console.log(ticker) 
                 getStockData(ticker)
-                // getStock(ticker) //uncomment once yahoo Api has been reviewed
+                getStock(ticker) 
                 getNews(ticker)
             }) ;
 
