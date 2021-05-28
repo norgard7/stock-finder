@@ -367,54 +367,54 @@ function clear() {
 }
 //Chart Stuff
 
-const labels = [
-    'seven',
-    'six',
-    'five',
-    'four',
-    'three',
-    'two',
-    'one'
-  ];
-  let data = {
-    labels: labels,
-    datasets: [{
-      label: 'Closing Stock Price for Last Seven Days',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-  };
+// const labels = [
+//     'seven',
+//     'six',
+//     'five',
+//     'four',
+//     'three',
+//     'two',
+//     'one'
+//   ];
+//   let data = {
+//     labels: labels,
+//     datasets: [{
+//       label: 'Closing Stock Price for Last Seven Days',
+//       backgroundColor: 'rgb(255, 99, 132)',
+//       borderColor: 'rgb(255, 99, 132)',
+//       data: [0, 10, 5, 2, 20, 30, 45],
+//     }]
+//   };
 
 
-  let config = {
-    type: 'line',
-    data,
-    options: {
-        scales: {
-            x: {
-              title: {
-                color: 'blue',
-                display: true,
-                text: 'day(s)-ago'
-              }
-            },
-            y: {
-                title: {
-                  color: 'blue',
-                  display: true,
-                  text: 'Stock Price ($)'
-                }
-              }
-        }
-    }
+//   let config = {
+//     type: 'line',
+//     data,
+//     options: {
+//         scales: {
+//             x: {
+//               title: {
+//                 color: 'blue',
+//                 display: true,
+//                 text: 'day(s)-ago'
+//               }
+//             },
+//             y: {
+//                 title: {
+//                   color: 'blue',
+//                   display: true,
+//                   text: 'Stock Price ($)'
+//                 }
+//               }
+//         }
+//     }
     
-  };
+//   };
 
-  var myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+//   var myChart = new Chart(
+//     document.getElementById('myChart'),
+//     config
+//   );
 
 initializeLocalStorage() ;
 
