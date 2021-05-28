@@ -125,8 +125,12 @@ function displayNews(data) {
 
 
 // let searchInput = ""
+let options = document.getElementById("companyOptions") ;
 
 document.getElementById("searchButton").addEventListener("click", function() {
+
+    options.removeAttribute("class") ;
+
     let inputEl = document.getElementById("searchInput") ;
     console.log(inputEl.value)
     let searchInput = inputEl.value
@@ -196,6 +200,8 @@ function getTickers(requestTickers1) {
                     newOption.setAttribute("value", ticker)
 
                     newOption.addEventListener("click", function() {
+
+                        options.setAttribute("class", "hide") ;
 
                         while (companyOptions.firstChild) {
                             companyOptions.removeChild(companyOptions.firstChild);
