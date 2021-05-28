@@ -161,6 +161,10 @@ function getTickers(requestTickers1) {
             .then(function (response) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
+                if (response.status === 404) {
+                    alert("Sorry, no response, please try again") ;
+                }
+
                 if (response.status) {
                 }
                 return response.json();
@@ -196,6 +200,8 @@ function getTickers(requestTickers1) {
                     newOption.textContent = `(${ticker}) ${name}`
 
                     newOption.setAttribute("class", "clarifyChoice") ;
+
+                    newOption.classList.add("optionButton") ;
 
                     newOption.setAttribute("value", ticker)
 
@@ -249,9 +255,13 @@ function getStockData(ticker) {
             .then(function (response) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
+                if (response.status === 404) {
+                    alert("Sorry, no response, please try again") ;
+                }
                 if (response.status) {
                 }
                 return response.json();
+
             }) .then(function (data) {
                 console.log(data);
 
@@ -309,6 +319,8 @@ function populateRecentSearches() {
             lastSearch.setAttribute("type", "button") ;
 
             lastSearch.setAttribute("class", "recentSearchButton") ;
+
+            lastSearch.classList.add("optionButton")
 
             lastSearch.setAttribute("value", ticker) ;
 

@@ -31,15 +31,23 @@
 
 <body>
 <!--Design context-->
-<header>
-    <nav id="navbar" class="flex container mx-auto">
+    <header>
+        <nav id="navbar" class="flex container mx-auto">
 
-        <div class="flex-1">
-            Stock Market Company Search
-        </div>
-        <div class="flex-1 flex justify-end">
-            <input id="searchInput" type="text" placeholder="enter company name here">
-            <button id="searchButton">search</button>                
+            <div class="flex-1">
+                Stock Market Company Search
+            </div>
+            <div class="flex-1 flex justify-end">
+                <input id="searchInput" type="text" placeholder="enter company name here">
+                <button id="searchButton" class="searchButton">search</button>                
+            </div>
+
+        </nav>
+
+        <!--Company options here-->
+        <div id="companyOptions" class="hide">
+            <h3>Which Would You Like?</h3>
+            <div id="putCompanyOptionsHere"></div>
         </div>
 
     </nav>
@@ -55,7 +63,7 @@
     <div class="flex relative h-screen w-32 flex-shrink-0">
         <div class="absolute inset-0 flex items-center justify-center flex flex-col ">
             <div>Recent Searches:</div>
-            <button id="clearRecentButton">Clear Recent Searches</button>
+            <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
             <div id="recentSearches"></div>
         </div>
     </div>
