@@ -19,86 +19,110 @@
         crossorigin="anonymous" 
         referrerpolicy="no-referrer" 
     />
-   
+
     <link 
         rel="stylesheet" 
         href="./style.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Stocks Finder</title>
+
+    <title>Stock Market Company Search</title>
 </head>
 
 <body>
 <!--Design context-->
     <header>
-        <nav class="flex container mx-auto">
+        <nav id="navbar" class="flex container mx-auto">
 
             <div class="flex-1">
-                Stocks Finder
+                Stock Market Company Search
             </div>
             <div class="flex-1 flex justify-end">
-                <input type="text" placeholder="company name here">
-                <button>search</button>                
+                <input id="searchInput" type="text" placeholder="enter company name here">
+                <button id="searchButton">search</button>                
             </div>
+
         </nav>
+
+        <!--Company options here-->
+        <div>Which Would You Like?</div>
+        <div id="putCompanyOptionsHere"></div>
+
     </header>
 
     <!--Left side bar-->
 <section class="flex flex-wrap content-center">
     <div class="flex relative h-screen w-32">
         <div class="absolute inset-0 flex items-center justify-center flex flex-col">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
+            <div>Recent Searches:</div>
+            <button id="clearRecentButton">Clear Recent Searches</button>
+            <div id="recentSearches"></div>
         </div>
     </div>
 
     <!--Right side main card-->
-    <div>
-        <img src="https://via.placeholder.com/300" alt="img-placeholder">
+
+    <div id="chartDiv">
+        <canvas id="myChart" width="400px" height="400px"></canvas>
     </div>
+
+    <div>
+        <div id="companyLogoDiv">
+            <img id="companyLogo" src= "" alt="">
+        </div>
+    
+        <div id="companyNameDiv">
+            <h2 id="companyName"></h2>
+        </div>
+    
+        
+        <div id="companyDescriptionDiv">
+            <p id="companyDescription"></p>
+        </div>
+    
+        <a id="companyUrl" href=""></a>
+    </div>
+
 </section>
 
-        <!--Amin's code for horizontal article positioning-->
-        <section>
-
-        </section>
-
 <!-- Rhyce added this -->
+<!-- 
 <nav id="navbar">
-
-    <h1>Stocks Finder</h1>
-
     <div>
-        <button id="searchButton">search</button>
+        <button id="searchButton">search</button> 
         <input id="searchInput" type="text" placeholder="enter company name here">
-
     </div>
-
+    
 </nav>
 
-<div class="container">
-    <section id="Recent_Searches"></section>
 
-    <section id="Stock_Value"></section>
-</div>
+    This code src is from the starting html draft
+        
+        <div class="container">
+        <section id="Recent_Searches"></section>
 
-<div class="ui-widget">
-    <label for="tags">Tags: </label>
-    <input id="tags">
-</div>
+        <section id="Stock_Value"></section>
+    </div>
+
+    This code src is Rhyce's placeholders 
+        
+        <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags">
+    </div>
+    
 
 
     <h3>Recent Searches</h3>
     <button id="clearRecentButton">Clear Recent Searches</button>
     <hr>
     <div id="recentSearches"></div>
+    
 
-<hr>
+    <hr>
     <h2>Which Would You Like?</h2>
     <div id="putCompanyOptionsHere"></div>
+    
 
     <div id="companyLogoDiv">
         <img id="companyLogo" src= "" alt="">
@@ -112,12 +136,15 @@
     <div id="companyDescriptionDiv">
         <p id="companyDescription"></p>
     </div>
-
+    
     <a id="companyUrl" href=""></a>
+
 
     <div id="chartDiv">
         <canvas id="myChart" width="400px" height="400px"></canvas>
     </div>
+    -->
+    
 <!-- End of Rhyce's Additions -->
 
 <!--Lauren's additions-->
