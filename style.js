@@ -188,7 +188,7 @@ function getTickers(requestTickers1) {
 
                 console.log(companies) ;
 
-                let companyOptions = document.getElementById("putCompanyOptionsHere") ;
+                let companyOptions = document.getElementById("companyOptions") ;
 
                 //Show Options
                 for (let i=0; i< companies.length; i++) {
