@@ -29,6 +29,7 @@ function getStock(company){
 
 // created a function to grab the important stock info
 function stockInfo(data){
+    stockInfoEl.innerHTML="";
     //current price
     let price = document.createElement("p");
     let currentPrice = data.financialData.currentPrice.fmt;
@@ -74,7 +75,7 @@ function stockInfo(data){
 
 function getNews(company) {
 
-    let apiUrl = `https://gnews.io/api/v4/search?q=${company}&country=us&token=sortby=relevance&token=${apiKey}`;
+    let apiUrl = `https://gnews.io/api/v4/search?q=${company}&country=us&sortby=relevance&token=${apiKey}`;
 
     
     fetch(apiUrl)
@@ -225,6 +226,8 @@ function getTickers(requestTickers1) {
 
                         console.log("calling getStockData")
                         getStockData(ticker) ;
+                        getStock(ticker); 
+                        getNews(ticker);
 
                     })
 
@@ -332,6 +335,7 @@ function populateRecentSearches() {
                 getStockData(ticker)
                 getStock(ticker) 
                 getNews(ticker)
+               
             }) ;
 
             recentSearchesDiv.appendChild(lastSearch) ;
