@@ -26,7 +26,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <title>Stock Market Search</title>
+    <title>Stock Finder</title>
 </head>
 
 <!-- <body x-data="{ showModal1: false }" :class="{'overflow-y-hidden': showModal1}"> -->
@@ -40,6 +40,9 @@
                 <h1>Stock Finder</h1>
             </div>
 
+            <div class="flex flex-1 justify-end">
+
+
             <div class="flex-1 flex justify-end">
                 <input id="searchInput" type="text" placeholder="   company">
                 <button id="searchButton"class="searchButton">🔎search</button>                
@@ -48,6 +51,7 @@
         </nav>
 
         <!--Company options here-->
+
         <div id="companyOptions" class="hide">
             <h2>Select Stock Company</h2>
         </div>
@@ -72,17 +76,19 @@
 
 
 <!--Left side bar-->
-<section class="flex flex-row">
-    <div class="flex relative h-screen w-32 flex-shrink-0">
-        <div class="absolute inset-0 flex items-center justify-center flex flex-col ">
-            <div>Recent Searches:</div>
+<aside>
+    <!-- <div class="flex relative h-screen w-32 flex-shrink-0"> -->
+        <div class="flex flex-col">
+            <h2>Recent Searches:</h2>
             <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
             <div id="recentSearches"></div>
         </div>
-    </div>
+    <!-- </div> -->
+</aside>
 
+<section id="main" class="flex flex-row justify-evenly w-3/5 ">
     <!--Right side main card-->
-    <div class="flex flex-col justify-around">
+    <div id="companyInfo" class="flex flex-col justify-around">
         <div id="companyLogoDiv">
             <img id="companyLogo" src="" alt="">
         </div>
@@ -99,16 +105,13 @@
         <a id="companyUrl" href=""></a>
     </div>
 
-<!--Lauren's additions-->
     <div id="stockInfo">
     
     </div>
-    <div id="news" class="flex flex-row justify-around">
-    
-    </div>
-<!--End of lauren's additions-->
-
 </section>
+<div id="news" class="flex flex-row justify-around">
+    
+</div>
 
 <!-- Rhyce added this -->
 <!-- 

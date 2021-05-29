@@ -42,21 +42,30 @@ nav {
 
 /* Rhyce's css additions */
 
-#putCompanyOptionsHere {
+/* #putCompanyOptionsHere {
     display: flex ;
     flex-direction: column ;
     align-items: flex-start;
-}
+} */
 
 /* button {
     margin: 10px ;
 } */
 
+aside {
+    width: 25%;
+    display: inline-flex;
+    
+}
+#main {
+    display: inline-flex;
+    /* margin: 50px; */
+}
 
 #recentSearches {
     display: flex ;
     flex-direction: column ;
-    align-items: flex-start;
+    align-content:center;
 }
 
 
@@ -66,9 +75,7 @@ nav {
     /* display: none ; */
 }
 
-/* End Rhyce's additions */
 
-/* Lauren's Css */
 .newsCard {
     width: 25%;
     display: flex;
@@ -94,7 +101,7 @@ nav {
     border-radius: 2px;
     width: 15%;
     text-align: left;
-    color: white;
+    color: black;
 }
 nav {
     margin: 0 auto;
@@ -109,9 +116,9 @@ h2 {
     height: 50px;
     display: inline-block;
 }
-#putCompanyOptionsHere {
+#companyOptions {
     border: #456268 solid 2px;
-    width: 25%;
+    width: 100%;
     margin-left: 1rem;
 }
 
@@ -119,9 +126,22 @@ h2 {
 .hide {
     display: none ;
 }
+#companyInfo {
+    width: 45%;
+    margin-left: 10px;
+}
+#stockInfo {
+    padding-top: 100px;
+    line-height: 2rem;
+    width: 45;
+}
+#companyName {
+    font-size: 1.5rem;
+}
+/* butttons */
 
 .optionButton {
-    background-color: white; /* Green */
+    background-color: white; 
     border: none;
     color: black;
     padding: 8px 15px;
@@ -131,21 +151,21 @@ h2 {
     font-size: 16px;
     margin: 10px ;
     border-radius: 8px ;
-    border: 2px solid black ;
+    border: 2px solid #456268;
 }
 
 .optionButton:hover {
-    background-color: grey; /* Green */
+    background-color: grey; 
     color: white ;
-    /* border: 2px solid green ; */
+
   }
 
 
 
- .clearButton {
-    background-color: white; /* Green */
+  .clearButton {
+    background-color: white; 
     border: none;
-    color: blue ;
+    color: black;
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -153,16 +173,21 @@ h2 {
     font-size: 16px;
     margin: 10px ;
     border-radius: 8px ;
-    border: 2px solid blue ;
+    border: 2px solid #456268;
  }
 
  .clearButton:hover {
-    background-color: blue;
-    color: white ;
- }
+    background-color:#d0e8f2;
+    color: black;
+    ;
+ } 
 
 
  .searchButton {
+
+     margin-left: 15px;
+     
+
     background-color: white;
     border: none;
     color: blue ;
@@ -174,12 +199,18 @@ h2 {
     margin: 10px ;
     border-radius: 8px ;
     border: 2px solid blue ;
+
  }
 
 
  .searchButton:hover {
+
+    background-color:#d0e8f2; 
+    color: black;
+
     background-color: blue;
     color: white ;
+
  }
 
 /* Begin Modal CSS */
