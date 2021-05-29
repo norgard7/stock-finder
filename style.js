@@ -117,24 +117,41 @@ function displayNews(data) {
 //---------------------------------------------
 // Rhyce's Code Start
 //---------------------------------------------
+// Begin Modal JS
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// End Modal JS
 
 // let requestUrl = "https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2020-06-01/2020-06-17?apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S"
-
-
-
 // let requestTickers = `https://api.polygon.io/v2/reference/tickers?&market=stocks&search=microsoft&apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S` ;
 
 
-// let searchInput = ""
 let options = document.getElementById("companyOptions") ;
+let inputEl ;
+let searchInput ;
 
 document.getElementById("searchButton").addEventListener("click", function() {
 
     options.removeAttribute("class") ;
 
-    let inputEl = document.getElementById("searchInput") ;
+    inputEl = document.getElementById("searchInput") ;
     console.log(inputEl.value)
-    let searchInput = inputEl.value
+    searchInput = inputEl.value
 
     console.log(searchInput) ;
 
@@ -145,7 +162,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
     getTickers(requestTickers1);
 })
 
-//parameters
+//api parameters
 tickers = "tickers?"
 
 stocks = "?market=stocks" 
@@ -163,7 +180,8 @@ function getTickers(requestTickers1) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
                 if (response.status === 404) {
-                    alert("Sorry, no response, please try again") ;
+                    // alert("Sorry, no response, please try again") ;
+                    modal.style.display = "block";
                 }
 
                 if (response.status) {
@@ -188,7 +206,7 @@ function getTickers(requestTickers1) {
 
                 console.log(companies) ;
 
-                let companyOptions = document.getElementById("putCompanyOptionsHere") ;
+                let companyOptions = document.getElementById("companyOptions") ;
 
                 //Show Options
                 for (let i=0; i< companies.length; i++) {
@@ -207,6 +225,8 @@ function getTickers(requestTickers1) {
                     newOption.setAttribute("value", ticker)
 
                     newOption.addEventListener("click", function() {
+
+                        inputEl.value = "" ;
 
                         options.setAttribute("class", "hide") ;
 
@@ -237,13 +257,6 @@ function getTickers(requestTickers1) {
             });   
 }
 
-//From Yahoo
-// let stockData = `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary?symbol=${symbol}$`
-
-// let stockKey = "ef5468e116msh11c48f47b928321p18e54ajsn6d5617cd94a9"
-
-// let symbol = "AMRN"
-
 let companyLogo = document.getElementById("companyLogo") ;
 let companyName = document.getElementById("companyName") ;
 let companyDescription = document.getElementById("companyDescription") ;
@@ -251,7 +264,6 @@ let companyUrl = document.getElementById("companyUrl") ;
 
 function getStockData(ticker) {
     console.log("getStockData function called") ;
-    // let url = "https://api.polygon.io/v2/reference/tickers/AAPL?apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S" ;
     let url = `https://api.polygon.io/v1/meta/symbols/${ticker}/company?&apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S` ;
     console.log(url) ;
         fetch(url)
@@ -259,7 +271,8 @@ function getStockData(ticker) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
                 if (response.status === 404) {
-                    alert("Sorry, no response, please try again") ;
+                    // alert("Sorry, no response, please try again") ;
+                    modal.style.display = "block";
                 }
                 if (response.status) {
                 }
@@ -284,10 +297,7 @@ function getStockData(ticker) {
 
                 companyUrl.textContent = url ;
 
-
                 companyUrl.setAttribute("href", `${url}`) ; 
-
-
         }) ;
 
     }
@@ -316,8 +326,6 @@ function populateRecentSearches() {
             lastSearch.textContent = searchHistoryArray[i]["name"] ;
 
             ticker = searchHistoryArray[i]["ticker"] ;
-
-            // console.log(lastSearch.textContent) ;
 
             lastSearch.setAttribute("type", "button") ;
 
@@ -366,7 +374,6 @@ clearRecentSearches.addEventListener("click", function(){
     clear() ;
 })
 
-////
 function clear() {
     console.log("clear function called") ;
 
