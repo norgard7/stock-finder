@@ -29,20 +29,23 @@
     <title>Stock Finder</title>
 </head>
 
+<!-- <body x-data="{ showModal1: false }" :class="{'overflow-y-hidden': showModal1}"> -->
 <body>
 <!--Design context-->
     <header>
-            <nav id="navbar" class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <nav id="navbar" class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
 
             <div id="title" class="flex-row flex-1">
-               <img id="stockImage" src="images/stock.png">
-               <h1>Stock Finder</h1>
+                <img id="stockImage" src="images/stock.png">
+                <h1>Stock Finder</h1>
             </div>
+
             <div class="flex flex-1 justify-end">
 
-                <input id="searchInput" type="text" placeholder="company">
+
+            <div class="flex-1 flex justify-end">
+                <input id="searchInput" type="text" placeholder="   company">
                 <button id="searchButton"class="searchButton">🔎search</button>                
-               
             </div>
 
         </nav>
@@ -53,9 +56,24 @@
             <h2>Select Stock Company</h2>
         </div>
         
+    </header>
 
 
-</header>
+<!-- Modal Here -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>ERROR: <hr> Data not found, please try again!</p>
+  </div>
+
+</div>
+<!-- End Modal -->
+
+
 
 <!--Left side bar-->
 <aside>
