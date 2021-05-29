@@ -154,7 +154,7 @@ search = "?search=microsoft"
 
 function getTickers(requestTickers1) {
 
-    console.log("getTickers functionc called") ;
+    console.log("getTickers function called") ;
 
     let companies = []
 
@@ -188,7 +188,7 @@ function getTickers(requestTickers1) {
 
                 console.log(companies) ;
 
-                let companyOptions = document.getElementById("putCompanyOptionsHere") ;
+                let companyOptions = document.getElementById("companyOptions") ;
 
                 //Show Options
                 for (let i=0; i< companies.length; i++) {
