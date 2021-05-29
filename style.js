@@ -125,8 +125,12 @@ function displayNews(data) {
 
 
 // let searchInput = ""
+let options = document.getElementById("companyOptions") ;
 
 document.getElementById("searchButton").addEventListener("click", function() {
+
+    options.removeAttribute("class") ;
+
     let inputEl = document.getElementById("searchInput") ;
     console.log(inputEl.value)
     let searchInput = inputEl.value
@@ -157,6 +161,10 @@ function getTickers(requestTickers1) {
             .then(function (response) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
+                if (response.status === 404) {
+                    alert("Sorry, no response, please try again") ;
+                }
+
                 if (response.status) {
                 }
                 return response.json();
@@ -193,9 +201,13 @@ function getTickers(requestTickers1) {
 
                     newOption.setAttribute("class", "clarifyChoice") ;
 
+                    newOption.classList.add("optionButton") ;
+
                     newOption.setAttribute("value", ticker)
 
                     newOption.addEventListener("click", function() {
+
+                        options.setAttribute("class", "hide") ;
 
                         while (companyOptions.firstChild) {
                             companyOptions.removeChild(companyOptions.firstChild);
@@ -243,9 +255,13 @@ function getStockData(ticker) {
             .then(function (response) {
                 console.log(response.status);
                 //  Conditional for the the response.status.
+                if (response.status === 404) {
+                    alert("Sorry, no response, please try again") ;
+                }
                 if (response.status) {
                 }
                 return response.json();
+
             }) .then(function (data) {
                 console.log(data);
 
@@ -303,6 +319,8 @@ function populateRecentSearches() {
             lastSearch.setAttribute("type", "button") ;
 
             lastSearch.setAttribute("class", "recentSearchButton") ;
+
+            lastSearch.classList.add("optionButton")
 
             lastSearch.setAttribute("value", ticker) ;
 

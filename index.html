@@ -39,52 +39,60 @@
                <h1>Stock Finder</h1>
             </div>
             <div class="flex-1 flex justify-end">
+
                 <input id="searchInput" type="text" placeholder="company">
-                <button id="searchButton">🔎search</button>                
+                <button id="searchButton"class="searchButton">🔎search</button>                
+               
             </div>
 
         </nav>
 
         <!--Company options here-->
-        <div id="putCompanyOptionsHere">
+
+        <div id="putCompanyOptionsHere" id="companyOptions" class="hide">
             <h2>Select Stock Company</h2>
         </div>
         
 
-    </header>
 
-    <!--Left side bar-->
-<section class="flex flex-wrap content-center">
-    <div class="flex relative h-screen w-32">
-        <div class="absolute inset-0 flex items-center justify-center flex flex-col">
+</header>
+
+<!--Left side bar-->
+<section class="flex flex-row">
+    <div class="flex relative h-screen w-32 flex-shrink-0">
+        <div class="absolute inset-0 flex items-center justify-center flex flex-col ">
             <div>Recent Searches:</div>
-            <button id="clearRecentButton">Clear Recent Searches</button>
+            <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
             <div id="recentSearches"></div>
         </div>
     </div>
 
     <!--Right side main card-->
-
-    <div id="chartDiv">
-        <canvas id="myChart" width="400px" height="400px"></canvas>
-    </div>
-
-    <div>
+    <div class="flex flex-col justify-around">
         <div id="companyLogoDiv">
-            <img id="companyLogo" src= "" alt="">
+            <img id="companyLogo" src="" alt="">
         </div>
-    
+
         <div id="companyNameDiv">
             <h2 id="companyName"></h2>
         </div>
-    
-        
+
+
         <div id="companyDescriptionDiv">
             <p id="companyDescription"></p>
         </div>
-    
+
         <a id="companyUrl" href=""></a>
     </div>
+
+<!--Lauren's additions-->
+    <div id="stockInfo">
+    
+    </div>
+    <div id="news" class="flex flex-row justify-around">
+    
+    </div>
+<!--End of lauren's additions-->
 
 </section>
 
