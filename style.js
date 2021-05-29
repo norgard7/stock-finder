@@ -171,7 +171,7 @@ search = "?search=microsoft"
 
 function getTickers(requestTickers1) {
 
-    console.log("getTickers functionc called") ;
+    console.log("getTickers function called") ;
 
     let companies = []
 
