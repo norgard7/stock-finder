@@ -251,7 +251,7 @@ function getTickers(requestTickers1) {
                         console.log("calling getStockData")
                         getStockData(ticker) ;
                         getStock(ticker); 
-                        getNews(ticker);
+                        // getNews(ticker);
 
                     })
 
