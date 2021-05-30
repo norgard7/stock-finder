@@ -204,9 +204,26 @@ nav {
       margin-top: 20px ;
   }
 
+
+  /*  */
   main {
       border: solid ;
       border-width: 3px ;
       border-color: grey ;
       border-radius: 15px ;
+  }
+
+  hr {
+      height: 6px ;
+      background-color: #79a3b1 ;
+      color: grey ;
+      margin: 8px ;
+  }
+
+  a {
+      color: #79a3b1 ;
+  }
+
+  section {
+      margin: 15px ;
   }
