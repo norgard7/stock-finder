@@ -86,103 +86,53 @@
     <!-- </div> -->
 </aside>
 
-<section id="main" class="flex flex-row justify-evenly w-3/5 ">
-    <!--Right side main card-->
-    <div id="companyInfo" class="flex flex-col justify-around">
+<main id="main" class="absolute flex flex-col justify-evenly w-3/5 ">
+    <section class="flex flex-row justify-evenly">
+        
         <div id="companyLogoDiv">
             <img id="companyLogo" src="" alt="">
         </div>
 
         <div id="companyNameDiv">
-            <h2 id="companyName"></h2>
+            <h3 id="companyName"></h3>
+        </div>
+    </section>
+    <!--Right side main card-->
+    <!-- this is a box for company info & stock -->
+    <section class="flex flex-row mt-4">
+        <div id="companyInfo" class="flex flex-col">
+
+         <h3 id="company"></h3>
+        
+            <div id="companyDescriptionDiv">
+                <p id="companyDescription"></p>
+            </div>
+
+            <a id="companyUrl" href=""></a>
         </div>
 
-
-        <div id="companyDescriptionDiv">
-            <p id="companyDescription"></p>
-        </div>
-
-        <a id="companyUrl" href=""></a>
-    </div>
-
-    <div id="stockInfo">
+        <div id="stockInfo">
     
-    </div>
-</section>
+        </div>
+    </section>
+</main>
 <div id="news" class="flex flex-row justify-around">
     
 </div>
 
-<!-- Rhyce added this -->
-<!-- 
-<nav id="navbar">
-    <div>
-        <button id="searchButton">search</button> 
-        <input id="searchInput" type="text" placeholder="enter company name here">
-    </div>
-    
-</nav>
 
 
-    This code src is from the starting html draft
-        
-        <div class="container">
-        <section id="Recent_Searches"></section>
 
-        <section id="Stock_Value"></section>
-    </div>
-
-    This code src is Rhyce's placeholders 
+    <!-- This code src is Rhyce's placeholders 
         
         <div class="ui-widget">
         <label for="tags">Tags: </label>
         <input id="tags">
     </div>
-    
-
-
-    <h3>Recent Searches</h3>
-    <button id="clearRecentButton">Clear Recent Searches</button>
-    <hr>
-    <div id="recentSearches"></div>
-    
-
-    <hr>
-    <h2>Which Would You Like?</h2>
-    <div id="putCompanyOptionsHere"></div>
-    
-
-    <div id="companyLogoDiv">
-        <img id="companyLogo" src= "" alt="">
-    </div>
-
-    <div id="companyNameDiv">
-        <h2 id="companyName"></h2>
-    </div>
+     -->
 
     
-    <div id="companyDescriptionDiv">
-        <p id="companyDescription"></p>
-    </div>
-    
-    <a id="companyUrl" href=""></a>
 
-
-    <div id="chartDiv">
-        <canvas id="myChart" width="400px" height="400px"></canvas>
-    </div>
-    -->
-    
-<!-- End of Rhyce's Additions -->
-
-<!--Lauren's additions-->
-    <section id= "stockInfo">
-
-    </section>    
-    <section id="news" class="flex flex-row justify-around">
-
-    </section>
-<!--End of lauren's additions-->
 
     <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
