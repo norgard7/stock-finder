@@ -145,13 +145,13 @@ window.onclick = function(event) {
 // let requestTickers = `https://api.polygon.io/v2/reference/tickers?&market=stocks&search=microsoft&apiKey=kYxMgr9oqrEq239cvWobO1J4q6rbXL6S` ;
 
 
-let options = document.getElementById("companyOptions") ;
+let optionsDiv = document.getElementById("companyOptionsDiv") ;
 let inputEl ;
 let searchInput ;
 
 document.getElementById("searchButton").addEventListener("click", function() {
 
-    options.removeAttribute("class") ;
+    optionsDiv.removeAttribute("class") ;
 
     inputEl = document.getElementById("searchInput") ;
     console.log(inputEl.value)
@@ -232,7 +232,7 @@ function getTickers(requestTickers1) {
 
                         inputEl.value = "" ;
 
-                        options.setAttribute("class", "hide") ;
+                        optionsDiv.setAttribute("class", "hide") ;
 
                         while (companyOptions.firstChild) {
                             companyOptions.removeChild(companyOptions.firstChild);
