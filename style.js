@@ -61,9 +61,13 @@ function stockInfo(data){
     if(!dividend) {
         dividend = "no dividend";
     }
+
     divYield.textContent = `Dividend Yield: ${dividend}`;
-    console.log(dividend);
+
     // display stock info in html
+    let stockHeading = document.createElement("h3");
+    stockHeading.textContent = "Stock Information";
+    stockInfoEl.appendChild(stockHeading);
     stockInfoEl.appendChild(price);
     stockInfoEl.appendChild(dayRange);
     stockInfoEl.appendChild(yearRange);
@@ -257,10 +261,12 @@ function getTickers(requestTickers1) {
             });   
 }
 
+let company = document.getElementById("company");
 let companyLogo = document.getElementById("companyLogo") ;
 let companyName = document.getElementById("companyName") ;
 let companyDescription = document.getElementById("companyDescription") ;
 let companyUrl = document.getElementById("companyUrl") ;
+
 
 function getStockData(ticker) {
     console.log("getStockData function called") ;
@@ -288,6 +294,8 @@ function getStockData(ticker) {
                 let description = data["description"] ;
 
                 let url = data["url"] ;
+
+                company.textContent = "Company Information";
 
                 companyLogo.setAttribute("src", logo) ;
 
@@ -448,20 +456,3 @@ function clear() {
 initializeLocalStorage() ;
 
 
-// fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v3/get-historical-data?symbol=AAPL&region=US", {
-// 	"method": "GET",
-//     // "mode": "no-cors",
-// 	"headers": {
-// 		"x-rapidapi-key": "ef5468e116msh11c48f47b928321p18e54ajsn6d5617cd94a9",
-// 		"x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com"
-// 	}
-// })
-// .then(response => {
-//     return response.json();
-// }).then (data => {console.log(data);})
-// .catch(err => {
-// 	console.error(err);
-// });
-// ---------------------------------------------
-// Rhyce's Code End
-// ---------------------------------------------

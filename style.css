@@ -1,56 +1,3 @@
-/* CSS color variables */
-
-/*:root {
-    --dark: #000000;
-    --light: #000000;
-    --option_here: #000000;
-}
-
-body {
-    margin: 0%;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: limegreen;
-}
-
-#Recent_Searches {
-    height: 400px;
-    width: 250px;
-    border: solid;
-    border-color: limegreen;
-}
-
-#Stock_Value {
-    height: 400px;
-    width: 900px;
-    border: solid;
-    border-color: limegreen;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
-    padding-right: 25px;
-    padding-left: 25px;
-}*/
-
-
-/* Rhyce's css additions */
-
-/* #putCompanyOptionsHere {
-    display: flex ;
-    flex-direction: column ;
-    align-items: flex-start;
-} */
-
-/* button {
-    margin: 10px ;
-} */
 
 aside {
     width: 25%;
@@ -59,7 +6,8 @@ aside {
 }
 #main {
     display: inline-flex;
-    /* margin: 50px; */
+    margin-top: 25px;
+    margin-left: 6%;
 }
 
 #recentSearches {
@@ -75,12 +23,15 @@ aside {
     /* display: none ; */
 }
 
-
+#news {
+    margin-top: 3%;
+}
 .newsCard {
     width: 25%;
     display: flex;
     flex-direction: column;
 }
+
 .newsCard a{
     font-size: 1.5rem;
 }
@@ -91,26 +42,26 @@ aside {
     margin: 0 auto;
     display: inline-block;
 }
+/* headings */
 #title h1 {
     display: inline-block;
     padding-left: 10px;
 }
-
-#searchButton {
-    border: white solid 2px;
-    border-radius: 2px;
-    width: 15%;
-    text-align: left;
-    color: black;
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
 }
+h3 {
+    font-size: 1.5rem;
+}
+
 nav {
     margin: 0 auto;
     width: 100%;
     background-color: #79a3b1;
 }
-h2 {
-    font-size: 1.5rem;
-}
+
+
 #stockImage {
     width: 50px;
     height: 50px;
@@ -131,15 +82,24 @@ h2 {
     margin-left: 10px;
 }
 #stockInfo {
-    padding-top: 100px;
-    line-height: 2rem;
+    /* padding-top: 130px; */
+    padding-left: 50px ;
+    line-height: 1.7rem;
     width: 45;
 }
 #companyName {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
+    
 }
-/* butttons */
 
+/* butttons */
+#searchButton {
+    border: white solid 2px;
+    border-radius: 2px;
+    width: 15%;
+    text-align: left;
+    color: black;
+}
 .optionButton {
     background-color: white; 
     border: none;
@@ -179,38 +139,14 @@ h2 {
  .clearButton:hover {
     background-color:#d0e8f2;
     color: black;
-    ;
+
  } 
-
-
- .searchButton {
-
-     margin-left: 15px;
-     
-
-    background-color: white;
-    border: none;
-    color: blue ;
-    padding: 8px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px ;
-    border-radius: 8px ;
-    border: 2px solid blue ;
-
- }
 
 
  .searchButton:hover {
 
     background-color:#d0e8f2; 
     color: black;
-
-    background-color: blue;
-    color: white ;
-
  }
 
 /* Begin Modal CSS */
