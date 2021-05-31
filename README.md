@@ -1,6 +1,10 @@
 <h1 align="center">Stock Finder</h1>
 
 <div align="center">
+<img src="https://user-images.githubusercontent.com/79816212/120241795-20858100-c229-11eb-978c-313107dc4865.png">
+</div>
+
+<div align="center">
 <img src="https://img.shields.io/badge/Contributed%20by-arerickson28-blue">
 
 <img src="https://img.shields.io/badge/Contributed%20by-maayazed-blue">
