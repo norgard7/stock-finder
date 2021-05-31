@@ -61,7 +61,7 @@ Stock Finder is a web application that enables users to search for a company's s
 
 ## CSS Framework
 <div align="center">
-<img src="https://miro.medium.com/max/2720/1*VKOMtQZm5yZ0goTl1u623Q.png">
+<img src="https://miro.medium.com/max/712/0*QXkyD4rFK7ivYf9-.png">
 </div>
 ## Future Development
 
