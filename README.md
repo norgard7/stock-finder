@@ -73,8 +73,8 @@ Stock Finder is a web application that enables users to search for a company's s
 </div>
 
 ## Future Development
-* Implementing a chart API to show stock history for the last 7 days.
-* Implementing a time based API to pull selective data from the search.
-* Securing funding for unlimited encrypted key from Gnews.IO.
+* **Implementing a chart API to show stock history for the last 7 days.**
+* **Implementing a time based API to pull selective data from the search.**
+* **Securing funding for unlimited encrypted key from Gnews.IO.**
 
 ## From the contributor's
