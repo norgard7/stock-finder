@@ -67,6 +67,9 @@ Stock Finder is a web application that enables users to search for a company's s
 ## API's
 <div align="center">
   <h3><a href="https://polygon.io/">Polygon.io</a></h3>
+  <h3><a href="https://github.com/mxbi/yahoo-finance-api/blob/master/DOCUMENTATION.md">Yahoo Finance</a></h3>
+  <h3><a href="https://gnews.io/">Gnews.IO</a></h3>
+  <h3><a href="https://api.jqueryui.com/">Autocomplete</a></h3>
 </div>
 
 ## Future Development
