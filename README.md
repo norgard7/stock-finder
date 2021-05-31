@@ -50,6 +50,6 @@ Stock Finder is a web application that enables users to search for a company's s
 
 <p><strong>Company URL:</strong> Select the URL to be redirected to the company offical webpage</p>
 
-<p><strong>Recent Searches:<strong> Select an option from the left sidebar to go back to a recent search. Select the clear recent searches to clear out the options in the left sidebar</p>
+<p><strong>Recent Searches:</strong> Select an option from the left sidebar to go back to a recent search. Select the clear recent searches to clear out the options in the left sidebar</p>
 
 <p><strong>Error Modal:</strong> Select the grey <strong>X</strong> to close the error modal if data is not availible from a search</p>
