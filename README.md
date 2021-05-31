@@ -21,4 +21,10 @@
 
 <img src="https://img.shields.io/github/forks/arerickson28/stock-finder">
   
+<img src="https://img.shields.io/badge/JavaScript-63.8%25-yellow">
+  
+<img src="https://img.shields.io/badge/HTML-19.3%25-red">
+  
+<img src="https://img.shields.io/badge/CSS-16.9%25-blueviolet">
+
 </div>  
