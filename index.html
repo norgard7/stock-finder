@@ -82,21 +82,23 @@
         <div class="flex flex-row sm:flex-col">
             <h2>Recent Searches:</h2>
             <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
+            <hr>
             <div id="recentSearches"></div>
         </div>
     <!-- </div> -->
 </aside>
 
-<main id="main" class="flex flex-col justify-evenly w-3/5 ">
-    <section class="flex flex-row justify-evenly">
+<main id="main" class="hide flex flex-col justify-evenly w-3/5">
+    <section class="flex flex-row justify-start">
         
+        <div id="companyNameDiv">
+            <h3 id="companyName"></h3>
+        </div>
+
         <div id="companyLogoDiv">
             <img id="companyLogo" src="" alt="">
         </div>
 
-        <div id="companyNameDiv">
-            <h3 id="companyName"></h3>
-        </div>
     </section>
     <!--Right side main card-->
     <!-- this is a box for company info & stock -->
