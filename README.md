@@ -33,3 +33,11 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/79816212/120239662-5ecc7180-c224-11eb-8400-8cfabaa36826.gif">
 </p>
+
+Stock Finder is a web application that enables users to make a search for a company's stocks. Search results will display:
+- Company Name
+- Company Logo
+- Company Description
+- A linked URL to the company offical webpage
+- Company stock summary
+- A selection of 3 related articles to the company's stocks
