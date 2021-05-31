@@ -47,7 +47,8 @@ Stock Finder is a web application that enables users to search for a company's s
 ## User Interface
 
 <p>Search Prompt: Input a company <strong>name</strong> or <strong>keyword</strong> and click the search button</p>
-<p></p>
+
 <p>Company URL: Click the URL to be redirected to the company offical webpage</p>
-<p></p>
-<p>Recent Searches: Click the clear recent searches
+
+<p>Recent Searches: Click the clear recent searches to clear out the options in the sidebar.</p>
+
