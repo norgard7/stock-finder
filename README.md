@@ -34,18 +34,19 @@
 <img src="https://user-images.githubusercontent.com/79816212/120239662-5ecc7180-c224-11eb-8400-8cfabaa36826.gif">
 </p>
 
-Stock Finder is a web application that enables users to make a search for a company's stocks. Search results will display.  .  .
+Stock Finder is a web application that enables users to search for a company's stocks. Search results will display.  .  .
 - **Company Name**
 - **Company Logo**
 - **Company Description**
-- **A linked URL to the company offical webpage**
+- **A linked URL to the company official webpage**
 - **Company stock summary**
 - **A selection of 3 related articles to the company's stocks**
+When the search is made, select an option from the _Select Stock Company_ dropdown. In the _Recent Searches_ sidebar, the option selected will be available, so repeated searches are not necessary.
 
 ## User Interface
 
-<p>Search Prompt: Input a company <strong>name</strong> or keyword and click the search button</p>
+<p>Search Prompt: Input a company <strong>name</strong> or <strong>keyword</strong> and click the search button</p>
 <p></p>
 <p>Company URL: Click the URL to be redirected to the company offical webpage</p>
 <p></p>
-<p>
+<p>Recent Searches: Click the clear recent searches
