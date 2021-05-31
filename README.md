@@ -40,9 +40,9 @@ Stock Finder is a web application that enables users to search for a company's s
 - **Company Description**
 - **A linked URL to the company official webpage**
 - **Company stock summary**
-- **A selection of 3 related articles to the company's stocks**
+- **A selection of 3 related articles to the company's stocks linked to the original source**
 <br>
-<p>When the search is made, select an option from the <strong>Select Stock Company</strong> dropdown. In the <strong>Recent Searches</strong> left sidebar, the option selected will be available, so repeated searches are not necessary. If data is not availible from the search, an error modal will show.</p>
+<p>When the search is made, select an option from the <strong>Select Stock Company</strong> dropdown. In the <strong>Recent Searches</strong> left sidebar, the option selected will be available, so repeated searches are not necessary. If data is not available from the search, an error modal will show.</p>
 
 ## User Interface
 
@@ -52,4 +52,6 @@ Stock Finder is a web application that enables users to search for a company's s
 
 <p><strong>Recent Searches:</strong> Select an option from the left sidebar to go back to a recent search. Select the clear recent searches to clear out the options in the left sidebar.</p>
 
-<p><strong>Error Modal:</strong> Select the grey <strong>X</strong> to close the error modal if data is not availible from a search.</p>
+<p><strong>Error Modal:</strong> Select the grey <strong>X</strong> to close the error modal if data is not available from a search.</p>
+
+<p><strong>Article Selection:</strong> Select the article title to be redirected to the article source page.</p>
