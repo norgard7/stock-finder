@@ -41,6 +41,7 @@ Stock Finder is a web application that enables users to search for a company's s
 - **A linked URL to the company official webpage**
 - **Company stock summary**
 - **A selection of 3 related articles to the company's stocks**
+<br>
 When the search is made, select an option from the _Select Stock Company_ dropdown. In the _Recent Searches_ sidebar, the option selected will be available, so repeated searches are not necessary.
 
 ## User Interface
