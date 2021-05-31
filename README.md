@@ -55,3 +55,6 @@ Stock Finder is a web application that enables users to search for a company's s
 <p><strong>Error Modal:</strong> Select the grey <strong>X</strong> to close the error modal if data is not available from a search.</p>
 
 <p><strong>Article Selection:</strong> Select the article title to be redirected to the article source page.</p>
+
+## CAUTION
+**Article selection is limited per total searches. If API timeout occurs article display will not be available. Article API call tally resets 24< hours.**
