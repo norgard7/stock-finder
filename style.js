@@ -148,6 +148,7 @@ window.onclick = function(event) {
 let optionsDiv = document.getElementById("companyOptionsDiv") ;
 let inputEl ;
 let searchInput ;
+let main ;
 
 document.getElementById("searchButton").addEventListener("click", function() {
 
@@ -229,6 +230,9 @@ function getTickers(requestTickers1) {
                     newOption.setAttribute("value", ticker)
 
                     newOption.addEventListener("click", function() {
+
+                        main = document.getElementById("main") ;
+                        main.style.display = "inline-flex" ;
 
                         inputEl.value = "" ;
 
@@ -384,6 +388,8 @@ clearRecentSearches.addEventListener("click", function(){
 
 function clear() {
     console.log("clear function called") ;
+
+    main.style.display = "none" ;
 
     while (recentSearches.firstChild) {
     recentSearches.removeChild(recentSearches.firstChild);
