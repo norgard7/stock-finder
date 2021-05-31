@@ -2,10 +2,12 @@
 aside {
     width: 25%;
     display: inline-flex;
+    /* display: inline-block ; */
     
 }
 #main {
-    display: inline-flex;
+    display: none;
+    /* display: inline-block ; */
     margin-top: 25px;
     margin-left: 6%;
 }
@@ -191,3 +193,39 @@ nav {
     cursor: pointer;
   }
   /* End Modal CSS */
+
+  #companyNameDiv {
+      display: flex ;
+      align-items: center ;
+      margin-left: 20px ;
+      margin-right: 10px ;
+      margin-top: 20px ;
+  }
+
+  #companyLogo {
+      margin-top: 20px ;
+  }
+
+
+  /*  */
+  main {
+      border: solid ;
+      border-width: 3px ;
+      border-color: grey ;
+      border-radius: 15px ;
+  }
+
+  hr {
+      height: 6px ;
+      background-color: #79a3b1 ;
+      color: grey ;
+      margin: 8px ;
+  }
+
+  a {
+      color: #79a3b1 ;
+  }
+
+  section {
+      margin: 15px ;
+  }
