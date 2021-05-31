@@ -81,4 +81,4 @@ Stock Finder is a web application that enables users to search for a company's s
 
 ## From the contributor's
 
-<span align="center">Made With ❤️</span>
+<div align="center">Made With ❤️</div>
