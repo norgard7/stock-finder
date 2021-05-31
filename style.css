@@ -1,6 +1,5 @@
 
 aside {
-    width: 25%;
     display: inline-flex;
     /* display: inline-block ; */
     
@@ -29,7 +28,7 @@ aside {
     margin-top: 3%;
 }
 .newsCard {
-    width: 25%;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -193,6 +192,13 @@ nav {
     cursor: pointer;
   }
   /* End Modal CSS */
+
+  /* media query for news articles */
+  @media only screen and (min-width: 768px) {
+      .newsCard {
+          width: 25%;
+      }
+      
 
   #companyNameDiv {
       display: flex ;
