@@ -1,4 +1,4 @@
-<h1 align="center">stock-finder</h1>
+<h1 align="center">Stock Finder</h1>
 
 <div align="center">
 <img src="https://img.shields.io/badge/Contributed%20by-arerickson28-blue">
@@ -15,3 +15,10 @@
 </p>
 
 <h2 align="center"><a href="https://arerickson28.github.io/stock-finder/">LIVE DEMO</a> </h2>
+
+<div align="center">
+<img src="https://img.shields.io/github/issues/arerickson28/stock-finder">
+
+<img src="https://img.shields.io/github/forks/arerickson28/stock-finder">
+  
+</div>  
