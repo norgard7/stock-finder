@@ -1,6 +1,6 @@
 <h1 align="center">stock-finder</h1>
 
-<div align="center>
+<div align="center">
 <img src="https://img.shields.io/badge/Contributed%20by-arerickson28-blue">
 
 <img src="https://img.shields.io/badge/Contributed%20by-maayazed-blue">
