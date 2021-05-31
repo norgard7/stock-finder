@@ -349,7 +349,9 @@ function populateRecentSearches() {
 
             lastSearch.addEventListener("click", function(event) {
 
-                ticker = event.target.getAttribute("value")
+                ticker = event.target.getAttribute("value");
+                main = document.getElementById("main") ;
+                main.style.display = "inline-flex" ;
 
                 console.log(ticker) 
                 getStockData(ticker)
