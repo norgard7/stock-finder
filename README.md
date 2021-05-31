@@ -79,6 +79,6 @@ Stock Finder is a web application that enables users to search for a company's s
 * **Updating CSS styling.**
 * **Updating media queries.**
 
-## From the contributor's
+## From the Contributor's
 
 <div align="center">Made With ❤️</div>
