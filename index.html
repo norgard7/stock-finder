@@ -73,65 +73,64 @@
 </div>
 <!-- End Modal -->
 
+<main id="page">
 
+    <!--Left side bar-->
+    <section id="sideSection">
 
-<!--Left side bar-->
-<aside>
-    <!-- <div class="flex relative h-screen w-32 flex-shrink-0"> -->
-        <div class="flex flex-row sm:flex-col">
-            <h2>Recent Searches:</h2>
-            <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
-            <hr>
-            <div id="recentSearches"></div>
-        </div>
-    <!-- </div> -->
-</aside>
-
-<main id="main" class="hide flex flex-col justify-evenly w-3/5">
-    <section class="flex flex-row justify-start">
-        
-        <div id="companyNameDiv">
-            <h3 id="companyName"></h3>
-        </div>
-
-        <div id="companyLogoDiv">
-            <img id="companyLogo" src="" alt="">
-        </div>
-
-    </section>
-    <!--Right side main card-->
-    <!-- this is a box for company info & stock -->
-    <section class="flex flex-row mt-4">
-        <div id="companyInfo" class="flex flex-col">
-
-         <h3 id="company"></h3>
-        
-            <div id="companyDescriptionDiv">
-                <p id="companyDescription"></p>
+    <aside>
+        <!-- <div class="flex relative h-screen w-32 flex-shrink-0"> -->
+            <div class="flex flex-col sm:flex-col">
+                <h2>Recent Searches:</h2>
+                <button id="clearRecentButton" class="clearButton">Clear Recent Searches</button>
+                <hr>
+                <div id="recentSearches"></div>
             </div>
-
-            <a id="companyUrl" href=""></a>
-        </div>
-
-        <div id="stockInfo">
-    
-        </div>
+        <!-- </div> -->
+    </aside>
     </section>
+
+    <section id="populatedField">
+        <!-- <main id="main" class="hide flex flex-col justify-evenly w-3/5 flex-grow"> -->
+            <main id="main">
+            <section id="nameLogo" class="flex flex-row justify-start">
+                
+                <div id="companyNameDiv">
+                    <h3 id="companyName"></h3>
+                </div>
+
+                <div id="companyLogoDiv">
+                    <img id="companyLogo" src="" alt="">
+                </div>
+
+            </section>
+            <!--Right side main card-->
+            <!-- this is a box for company info & stock -->
+            <section id="descriptionAndStock" class="flex flex-row mt-4">
+                <div id="companyInfo" class="flex flex-col">
+
+                <h3 id="company"></h3>
+                
+                    <div id="companyDescriptionDiv">
+                        <p id="companyDescription"></p>
+                    </div>
+
+                    <a id="companyUrl" href=""></a>
+                </div>
+
+                <div id="stockInfo">
+            
+                </div>
+            </section>
+            <div id="news" class="flex flex-col md:flex-row items-center md:items-start justify-around"></div>
+        </main>
+       
+    </section>
+
 </main>
-<div id="news" class="flex flex-col md:flex-row items-center md:items-start justify-around">
-    
-</div>
 
 
-
-
-    <!-- This code src is Rhyce's placeholders 
-        
-        <div class="ui-widget">
-        <label for="tags">Tags: </label>
-        <input id="tags">
-    </div>
-     -->
+   
 
     
 

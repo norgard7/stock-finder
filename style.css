@@ -1,9 +1,18 @@
 
+
+
 aside {
-    display: inline-flex;
+    display: inline-flex ;
     /* display: inline-block ; */
+    /* flex-direction: row ; */
     
 }
+
+/* aside div {
+    display: flex ;
+    flex-direction: column ;
+} */
+
 #main {
     display: none;
     /* display: inline-block ; */
@@ -79,13 +88,31 @@ nav {
 #companyInfo {
     width: 45%;
     margin-left: 10px;
+    justify-content: space-around ;
+    border: solid ;
+    border-width: 2px ;
+    border-color: #79a3b1 ;
+    border-radius: 15px ;
+    padding-left: 10px ;
 }
 #stockInfo {
     /* padding-top: 130px; */
     padding-left: 50px ;
     line-height: 1.7rem;
     width: 45;
+    border: solid ;
+    border-width: 2px ;
+    border-color: #79a3b1 ;
+    border-radius: 15px ;
+    padding-top: 8px ;
 }
+
+#stockInfo p {
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+    margin-right: 10px ;
+}
+
 #companyName {
     font-size: 3.5rem;
     
@@ -208,11 +235,12 @@ nav {
 
   #companyLogo {
       margin-top: 20px ;
+      margin-bottom: 10px ;
   }
 
 
   /*  */
-  main {
+  #main {
       border: solid ;
       border-width: 3px ;
       border-color: grey ;
@@ -233,3 +261,81 @@ nav {
   section {
       margin: 15px ;
   }
+
+
+  #page {
+      display: flex ;
+  }
+
+  #populatedField {
+      display: flex ;
+      flex-direction: column ;
+      flex-grow: 4 ;
+      margin: 0px ;
+  }
+
+  #sideSection {
+      flex-grow: 1 ;
+      background-color: rgb(245, 227, 203) ;
+      margin: 0 ;
+      display: flex ;
+      justify-content: center;
+  }
+
+  #main {
+    flex-grow: 1 ;
+    margin-right: 20px ;
+    margin-left: 20px ;  
+    display: flex ;
+    flex-direction: column ;
+    display: none ;
+    margin-bottom: 30px ;
+  }
+
+/* #nameLogo {
+    display: flex ;
+}
+
+#descriptionAndStock {
+    display: flex ;
+    justify-content: space-around ; */
+}
+
+#news {
+    margin-bottom: 30px ;
+}
+
+  #main section {
+    display: flex ;
+    justify-content: space-around ;
+  }
+
+  @media only screen and (max-width: 768px) {
+    #sideSection {
+        width: 100%;
+    }
+
+    #populatedField {
+        width: 100% ;
+        flex-direction: column ;
+    }
+
+    nav {
+        width: 100% ;
+    }
+
+    #page {
+        flex-direction: column ;
+    }
+
+    #main section {
+        flex-direction: column ;
+    }
+
+    #companyInfo {
+        display: flex ;
+        flex-direction: column ;
+        width: 100% ;
+        margin-bottom: 10px ;
+    }
+}
